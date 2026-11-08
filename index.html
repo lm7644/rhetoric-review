@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>汉语修辞学 · 期末复习（公开版）</title>
+<link rel="icon" href="favicon.ico" sizes="any">
 <style>
 :root{
 --bg:#f6f4ee;--panel:#fffdf8;--ink:#27241f;--muted:#6f675c;--faint:#989083;
@@ -175,9 +176,39 @@ body.nav-open #overlay{display:block}
 .pg-btn{padding:9px 13px;font-size:13.5px}
 article.kp{padding:16px 16px}
 body{font-size:16px}
-.crumbs{font-size:12px}
-#searchbox{width:34vw}
 .loc{max-width:200px}
+/* 顶栏改为两行：面包屑独占第二行并允许换行，不再省略 */
+#topbar{height:96px;flex-wrap:wrap;align-content:center;padding:4px 12px;gap:4px 10px}
+#burger{width:44px;height:44px;font-size:19px}
+#searchbox{flex:1 1 auto;width:auto;min-width:0}
+#q{height:44px;border-radius:22px;padding:0 14px}
+#hits{top:48px}
+#printlink{display:inline-flex;align-items:center;min-height:44px;padding:0 14px}
+.crumbs{order:3;flex:1 1 100%;font-size:12px;white-space:normal;overflow:visible;flex-wrap:wrap;line-height:1.4;overflow-wrap:anywhere}
+.crumbs span,.crumbs a{overflow:visible;text-overflow:clip}
+.crumbs a{display:inline-flex;align-items:center;min-height:44px;margin:-13.6px 0}
+#main{margin-top:96px}
+#side{top:96px}
+#overlay{inset:96px 0 0}
+html{scroll-padding-top:104px}
+/* 触控目标统一 ≥44px */
+.side-tools label{position:relative;padding-left:32px;min-height:44px}
+#onlyStar{position:absolute;left:0;top:50%;transform:translateY(-50%);width:44px;height:44px;margin:0;opacity:0;cursor:pointer}
+.side-tools label::before{content:"";position:absolute;left:8px;top:50%;transform:translateY(-50%);width:20px;height:20px;border:1px solid var(--line);border-radius:5px;background:#fff}
+.side-tools label:has(#onlyStar:checked)::before{background:var(--accent) url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M5 12l5 5 9-10' fill='none' stroke='white' stroke-width='3'/></svg>") center/14px 14px no-repeat;border-color:var(--accent)}
+.side-tools a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+.tmod-h{min-height:44px}
+.tsec-h{min-height:44px;padding:0 8px}
+.tsec-h>a{display:inline-flex;align-items:center;min-height:44px}
+.tsec-h .tst{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center;font-size:12px}
+.tkp a{min-height:44px;align-items:center;padding:0 8px 0 20px}
+.star{min-width:44px;min-height:44px;display:inline-flex;align-items:center;justify-content:center}
+.chips a,.rel-g a{display:inline-flex;align-items:center;min-height:44px;padding:0 12px}
+.testchip{display:inline-flex;align-items:center;min-height:44px;padding:0 12px}
+summary{display:flex;align-items:center;min-height:44px}
+.test-back,.print-hint a{display:inline-flex;align-items:center;min-height:44px;padding:0 6px}
+.pg-btn{min-height:44px}
+.hit-item{min-height:44px}
 }
 @media print{
 #topbar,#side,#pager,#overlay{display:none!important}
